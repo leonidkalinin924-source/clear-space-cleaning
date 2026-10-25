@@ -1781,3 +1781,56 @@ textarea:focus-visible {
     max-height: 420px;
   }
 }
+
+/* === CLEAR SPACE: premium hero buttons === */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-actions .button {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease;
+}
+
+.hero-actions .button:not(.button-outline) {
+  box-shadow: 0 8px 22px rgba(57, 120, 232, 0.2);
+}
+
+.hero-actions .button-outline {
+  border: 1px solid rgba(30, 54, 87, 0.16);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-actions .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .hero-actions .button:not(.button-outline):hover {
+    box-shadow: 0 12px 28px rgba(57, 120, 232, 0.28);
+  }
+
+  .hero-actions .button-outline:hover {
+    background: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 50px;
+  }
+}
