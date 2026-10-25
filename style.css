@@ -2615,3 +2615,12 @@ textarea:focus-visible {
   font-size: 13px;
 }
 
+.calculator-card .field > label.check-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px;
+  margin: 8px 0 0 !important;
+  padding: 12px 13px !important;
+  font-weight: 400 !important;
+}
