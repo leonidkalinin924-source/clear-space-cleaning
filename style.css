@@ -1613,3 +1613,31 @@ p {
     top: -100px;
   }
 }
+
+/* === CLEAR SPACE: unified SVG icons === */
+
+.service-icon,
+.process-icon {
+  display: grid;
+  place-items: center;
+}
+
+.service-icon svg,
+.process-icon svg {
+  display: block;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+.service-icon svg {
+  color: #3978e8;
+}
+
+@media (max-width: 760px) {
+  .service-icon svg,
+  .process-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+}
