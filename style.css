@@ -1834,3 +1834,53 @@ textarea:focus-visible {
     min-height: 50px;
   }
 }
+
+/* === CLEAR SPACE: hero typography === */
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero h1 {
+  max-width: 680px;
+  text-wrap: balance;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+}
+
+.hero .lead {
+  max-width: 540px;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+
+.hero .eyebrow {
+  letter-spacing: 0.14em;
+}
+
+@media (min-width: 761px) {
+  .hero h1 {
+    margin-bottom: 22px;
+  }
+
+  .hero .lead {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero h1 {
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+  }
+
+  .hero .lead {
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    letter-spacing: -0.04em;
+  }
+}
