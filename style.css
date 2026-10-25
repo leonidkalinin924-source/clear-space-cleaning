@@ -1641,3 +1641,61 @@ p {
     height: 25px;
   }
 }
+
+/* === CLEAR SPACE: final visual polish === */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+button,
+.btn,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(82, 151, 255, 0.65);
+  outline-offset: 4px;
+}
+
+.service-card,
+.process-card,
+.benefit-grid article {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover,
+  .process-card:hover,
+  .benefit-grid article:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
