@@ -1494,3 +1494,122 @@ button:focus-visible, a:focus-visible {
     font-size: 42px;
   }
 }
+
+/* === CLEAR SPACE: visual consistency === */
+
+/* Единая типографика */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Заголовки секций */
+.section-heading {
+  max-width: 700px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+/* Небольшие фирменные детали */
+.eyebrow {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+}
+
+/* Карточки этапов */
+.process-card {
+  border-color: #e3eaf4;
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(20, 38, 61, 0.035);
+}
+
+.process-card > span {
+  color: #d4e2fb;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.process-icon {
+  border: 1px solid #e0eaff;
+  background: linear-gradient(145deg, #f3f7ff, #e8f0ff);
+  border-radius: 18px;
+}
+
+/* Блок расчёта */
+.calculator-card,
+.application-form {
+  border-color: #e1e8f2;
+  box-shadow: 0 14px 42px rgba(20, 38, 61, 0.055);
+}
+
+.price-panel {
+  background: linear-gradient(135deg, #edf3ff, #f6f8ff);
+  border-color: #dce7fb;
+}
+
+.form-price {
+  background: #f3f6fc;
+  border: 1px solid #e6ecf5;
+}
+
+/* Финальный призыв */
+.final-cta-inner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #142f63 0%, #2457c5 58%, #3978e8 100%);
+}
+
+.final-cta-inner::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -120px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 28px rgba(255, 255, 255, 0.035),
+    0 0 0 58px rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+}
+
+.final-cta-inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 760px) {
+  .section-heading {
+    text-align: left;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .process-card {
+    border-radius: 20px;
+  }
+
+  .process-card > span {
+    font-size: 36px;
+  }
+
+  .final-cta-inner::after {
+    right: -150px;
+    top: -100px;
+  }
+}
