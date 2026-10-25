@@ -1884,3 +1884,57 @@ textarea:focus-visible {
     letter-spacing: -0.04em;
   }
 }
+
+/* === CLEAR SPACE: mobile hero balance === */
+
+@media (max-width: 760px) {
+  .hero-grid {
+    gap: 30px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero .eyebrow {
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    margin-top: 14px;
+    margin-bottom: 18px;
+    overflow-wrap: break-word;
+  }
+
+  .hero .lead {
+    max-width: 100%;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+
+  .hero-image {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-image .image-note {
+    max-width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-grid {
+    gap: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 9vw, 40px);
+  }
+
+  .hero-actions .button {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+  }
+}
