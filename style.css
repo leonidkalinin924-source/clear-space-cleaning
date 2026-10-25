@@ -2555,3 +2555,35 @@ textarea:focus-visible {
     margin-top: 16px;
   }
 }
+
+/* === CLEAR SPACE: fix checkbox alignment === */
+
+.calculator-card .check-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calculator-card .check-row input[type="checkbox"] {
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  display: block;
+  position: static;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  transform: none;
+  accent-color: #3978e8;
+}
+
+.calculator-card .check-row span {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.calculator-card .check-row strong {
+  margin-left: auto;
+  white-space: nowrap;
+}
