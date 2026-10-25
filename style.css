@@ -1019,3 +1019,80 @@ button:focus-visible, a:focus-visible {
     transition-duration: .01ms !important;
   }
 }
+
+/* === CLEAR SPACE: premium polish === */
+
+::selection {
+  background: #dbe8ff;
+  color: #14263d;
+}
+
+.header {
+  box-shadow: 0 4px 24px rgba(20, 38, 61, 0.025);
+}
+
+.logo {
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.78;
+}
+
+.button {
+  box-shadow: 0 5px 14px rgba(57, 120, 232, 0.10);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
+
+.service-card,
+.process-card,
+.calculator-card,
+.application-form {
+  box-shadow: 0 8px 30px rgba(20, 38, 61, 0.045);
+}
+
+.service-card:hover,
+.process-card:hover {
+  border-color: #d4e1f8;
+}
+
+.field select,
+.field input[type="number"],
+.application-form input,
+.application-form select,
+.application-form textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field select:focus,
+.field input:focus,
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  box-shadow: 0 0 0 4px rgba(57, 120, 232, 0.09);
+}
+
+.nav-links a,
+.service-bottom a,
+.footer-inner > a:last-child {
+  transition: color 0.2s ease;
+}
+
+.image-note {
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 760px) {
+  .service-card:hover,
+  .process-card:hover {
+    transform: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+}
