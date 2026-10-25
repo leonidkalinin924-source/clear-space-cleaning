@@ -2569,55 +2569,49 @@ textarea:focus-visible {
   white-space: nowrap;
 }
 
-/* === FIX: vertically center checkboxes === */
 
+/* CLEAR SPACE: checkbox alignment fix */
 
+.calculator-card .check-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 12px 0;
+}
 
 .calculator-card .check-row input[type="checkbox"] {
-  position: relative;
-  inset: auto;
+  appearance: auto;
+  -webkit-appearance: checkbox;
   display: block;
+  position: static;
   flex: 0 0 18px;
   width: 18px;
   height: 18px;
   margin: 0;
+  padding: 0;
   align-self: center;
+  transform: none;
+  accent-color: #3978e8;
 }
 
 .calculator-card .check-row span {
   display: block;
   flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
   align-self: center;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .calculator-card .check-row strong {
   display: block;
   flex: 0 0 auto;
+  margin: 0 0 0 auto;
   align-self: center;
-  margin-left: auto;
+  white-space: nowrap;
+  font-size: 13px;
 }
 
-
-.calculator-card .check-row input[type="checkbox"] {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: center;
-  justify-self: center;
-  position: static;
-  float: none;
-  margin: 0;
-  transform: none;
-}
-
-.calculator-card .check-row span {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: center;
-}
-
-.calculator-card .check-row strong {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: center;
-  margin: 0;
-}
