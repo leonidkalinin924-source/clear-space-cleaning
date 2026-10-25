@@ -2591,16 +2591,6 @@ textarea:focus-visible {
 /* === FIX: vertically center checkboxes === */
 
 
-/* === CLEAR SPACE: stable checkbox alignment === */
-
-.calculator-card .check-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-  min-height: 50px;
-}
 
 .calculator-card .check-row input[type="checkbox"] {
   position: relative;
