@@ -2624,3 +2624,12 @@ textarea:focus-visible {
   padding: 12px 13px !important;
   font-weight: 400 !important;
 }
+/* CLEAR SPACE — итоговая стоимость */
+.calculator-card #total,
+.calculator-card .total-price {
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  color: #245fe5;
+  line-height: 1.2;
+}
