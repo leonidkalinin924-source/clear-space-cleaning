@@ -2633,3 +2633,18 @@ textarea:focus-visible {
   color: #245fe5;
   line-height: 1.2;
 }
+/* CLEAR SPACE — оформление итоговой цены */
+#price {
+  font-size: 30px !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.8px;
+  color: #245fe5 !important;
+  line-height: 1.2;
+}
+#formPrice {
+  font-size: 30px !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.8px;
+  color: #245fe5 !important;
+  line-height: 1.2;
+}
