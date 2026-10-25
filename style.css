@@ -1699,3 +1699,48 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* === CLEAR SPACE: hero trust details === */
+
+.hero .trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 26px;
+}
+
+.hero .trust-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #526176;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.hero .trust-list i {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border: 1px solid rgba(57, 120, 232, 0.24);
+  border-radius: 50%;
+  background: rgba(57, 120, 232, 0.08);
+  color: #3978e8;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .hero .trust-list {
+    gap: 10px 14px;
+    margin-top: 22px;
+  }
+
+  .hero .trust-list span {
+    font-size: 12px;
+  }
+}
