@@ -167,7 +167,14 @@ h3 {
 }
 
 .hero {
-  padding: 88px 0 94px;
+  padding: 104px 0 112px;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(57, 120, 232, 0.09),
+      transparent 38%
+    ),
+    #f7f8fa;
 }
 
 .hero-grid {
