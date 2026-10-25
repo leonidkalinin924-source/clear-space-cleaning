@@ -4,1180 +4,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#f7f9fc">
-  <meta name="description" content="CLEAR SPACE — уборка квартир и домов. Поддерживающая, генеральная уборка и уборка после ремонта.">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="CLEAR SPACE — профессиональная уборка квартир и домов.">
   <title>CLEAR SPACE — Чистота нового уровня</title>
-
-  <style>
-    :root {
-      --blue: #2457f5;
-      --blue-light: #edf2ff;
-      --navy: #101b35;
-      --muted: #6b7488;
-      --bg: #f7f9fc;
-      --white: #fff;
-      --line: #e8edf5;
-      --radius: 24px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      color: var(--navy);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-
-    body, button, input, select {
-      font-family: Inter, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button, input, select {
-      font-size: inherit;
-    }
-
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .container {
-      width: min(1160px, 90%);
-      margin: auto;
-    }
-
-    /* HEADER */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .logo {
-      font-size: 23px;
-      font-weight: 900;
-      letter-spacing: -1.2px;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: var(--blue);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue);
-    }
-
-    .btn {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: 0;
-      border-radius: 13px;
-      padding: 13px 21px;
-      background: var(--blue);
-      color: white;
-      font-weight: 750;
-      text-align: center;
-      cursor: pointer;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px #2457f52e;
-    }
-
-    .btn-light {
-      background: white;
-      color: var(--navy);
-      border: 1px solid var(--line);
-    }
-
-    .menu-btn {
-      display: none;
-      background: none;
-      border: 0;
-      font-size: 27px;
-      cursor: pointer;
-      color: var(--navy);
-      padding: 6px;
-    }
-
-    /* HERO */
-
-    .hero {
-      padding: 76px 0 70px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 55px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #eaf0ff;
-      color: var(--blue);
-      padding: 8px 13px;
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .6px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 5.5vw, 69px);
-      line-height: 1.04;
-      letter-spacing: -3px;
-      margin: 23px 0;
-    }
-
-    h1 span,
-    .calculator-intro h2 span {
-      color: var(--blue);
-    }
-
-    .hero-copy {
-      max-width: 490px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .trust {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .trust span::before {
-      content: "✓";
-      color: var(--blue);
-      margin-right: 7px;
-    }
-
-    .hero-visual {
-      position: relative;
-    }
-
-    .hero-visual img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 4 / 4.3;
-      object-fit: cover;
-      border-radius: 30px;
-    }
-
-    .float-card {
-      position: absolute;
-      left: -20px;
-      bottom: 25px;
-      background: white;
-      padding: 17px 20px;
-      border-radius: 17px;
-      box-shadow: 0 15px 45px #101b3515;
-      font-size: 13px;
-    }
-
-    .float-card strong {
-      display: block;
-      font-size: 19px;
-    }
-
-    .float-card small {
-      color: var(--muted);
-    }
-
-    /* COMMON SECTIONS */
-
-    section {
-      padding: 82px 0;
-    }
-
-    .section-head {
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 42px;
-    }
-
-    .section-head h2,
-    .calculator-intro h2 {
-      font-size: clamp(30px, 4vw, 43px);
-      letter-spacing: -1.5px;
-      line-height: 1.15;
-      margin: 14px 0;
-    }
-
-    .section-head p,
-    .calculator-intro p {
-      color: var(--muted);
-    }
-
-    /* SERVICES */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .service-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 27px;
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 50px #101b350d;
-    }
-
-    .service-icon {
-      width: 54px;
-      height: 54px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: var(--blue-light);
-      font-size: 26px;
-      margin-bottom: 22px;
-    }
-
-    .service-card h3 {
-      font-size: 20px;
-      margin-bottom: 9px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .service-price {
-      display: block;
-      margin-top: 20px;
-      color: var(--blue);
-      font-weight: 850;
-    }
-
-    /* WHY US */
-
-    .why {
-      background: var(--navy);
-      color: white;
-    }
-
-    .why .section-head p {
-      color: #aab5ce;
-    }
-
-    .why .eyebrow {
-      background: #25365b;
-      color: #b9caff;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .why-card {
-      padding: 20px 0;
-    }
-
-    .why-card .num {
-      color: #8ba7ff;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .why-card h3 {
-      font-size: 18px;
-      margin: 12px 0 8px;
-    }
-
-    .why-card p {
-      color: #aab5ce;
-      font-size: 14px;
-    }
-
-    /* CALCULATOR */
-
-    .calculator-wrap {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 45px;
-      align-items: start;
-    }
-
-    .calculator-intro {
-      padding-top: 12px;
-    }
-
-    .calculator-intro h2 {
-      font-size: clamp(32px, 4vw, 44px);
-    }
-
-    .calculator-intro p {
-      margin-bottom: 18px;
-    }
-
-    .calc-hint {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 16px;
-      margin-top: 24px;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .calc-hint span {
-      font-size: 21px;
-    }
-
-    .calc-box {
-      min-width: 0;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 30px;
-      box-shadow: 0 18px 55px #101b3508;
-    }
-
-    .field {
-      margin-bottom: 22px;
-    }
-
-    .field > label:first-child {
-      display: block;
-      font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 9px;
-    }
-
-    .field select,
-    .field input[type="number"] {
-      width: 100%;
-      min-height: 49px;
-      padding: 12px 14px;
-      border: 1px solid #dfe5ef;
-      border-radius: 12px;
-      background: white;
-      color: var(--navy);
-      outline: none;
-    }
-
-    .field select:focus,
-    .field input:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px #2457f51a;
-    }
-
-    .field-hint {
-      display: block;
-      margin-top: 6px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .extra-option {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      min-height: 48px;
-      padding: 10px 12px;
-      margin-top: 8px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background .2s, border-color .2s;
-    }
-
-    .extra-option:has(input:checked) {
-      background: var(--blue-light);
-      border-color: #b8caff;
-    }
-
-    .extra-option input {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      accent-color: var(--blue);
-    }
-
-    .extra-option span {
-      flex: 1;
-      font-size: 13px;
-    }
-
-    .extra-option strong {
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    .calc-result {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 22px;
-      border-radius: 17px;
-      background: var(--blue-light);
-      margin: 24px 0 18px;
-    }
-
-    .calc-result small {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .calc-result strong {
-      display: block;
-      color: var(--blue);
-      font-size: clamp(27px, 4vw, 34px);
-      line-height: 1.3;
-      margin-top: 5px;
-      overflow-wrap: anywhere;
-    }
-
-    .calc-result p {
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 7px;
-    }
-
-    .calc-result > span {
-      font-size: 30px;
-      color: var(--blue);
-    }
-
-    .calc-box > .btn {
-      width: 100%;
-    }
-
-    .fine-print {
-      color: var(--muted);
-      font-size: 11px;
-      margin-top: 12px;
-    }
-
-    /* PROCESS */
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .process-card {
-      position: relative;
-      overflow: hidden;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 30px;
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .process-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 45px #101b3510;
-    }
-
-    .process-number {
-      position: absolute;
-      top: 20px;
-      right: 24px;
-      color: #dce5ff;
-      font-size: 38px;
-      font-weight: 900;
-      letter-spacing: -2px;
-    }
-
-    .process-icon {
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      margin-bottom: 23px;
-      border-radius: 18px;
-      background: var(--blue-light);
-      font-size: 27px;
-    }
-
-    .process-card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* CTA AND FOOTER */
-
-    .cta {
-      padding: 25px 0 85px;
-    }
-
-    .cta-box {
-      border-radius: 30px;
-      background: var(--blue);
-      color: white;
-      padding: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .cta-box h2 {
-      font-size: clamp(30px, 4vw, 43px);
-      line-height: 1.15;
-      letter-spacing: -1px;
-      max-width: 570px;
-    }
-
-    .cta-box p {
-      color: #dce5ff;
-      margin-top: 12px;
-    }
-
-    .cta-box .btn {
-      background: white;
-      color: var(--blue);
-      white-space: nowrap;
-    }
-
-    footer {
-      background: white;
-      border-top: 1px solid var(--line);
-      padding: 28px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    footer p {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    /* ANIMATIONS */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .6s, transform .6s;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* TABLETS */
-
-    @media (max-width: 950px) {
-      .nav-links {
-        gap: 15px;
-      }
-
-      .nav-links a {
-        font-size: 13px;
-      }
-
-      .calculator-wrap {
-        grid-template-columns: 1fr 1.1fr;
-        gap: 25px;
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 760px) {
-      html {
-        scroll-padding-top: 75px;
-      }
-
-      .container {
-        width: min(100% - 32px, 560px);
-      }
-
-      .nav {
-        min-height: 68px;
-        gap: 12px;
-      }
-
-      .logo {
-        font-size: 21px;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 68px;
-        left: 0;
-        right: 0;
-        padding: 22px 24px;
-        background: white;
-        border-bottom: 1px solid var(--line);
-        box-shadow: 0 15px 25px #101b350b;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 13px 0;
-        font-size: 15px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .nav-links a:last-child {
-        border-bottom: 0;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .nav > .btn {
-        display: none;
-      }
-
-      .hero {
-        padding: 45px 0 55px;
-      }
-
-      .hero-grid,
-      .calculator-wrap {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      h1 {
-        font-size: clamp(40px, 11vw, 58px);
-        letter-spacing: -2px;
-        margin: 19px 0;
-      }
-
-      .hero-copy {
-        font-size: 16px;
-      }
-
-      .hero-visual {
-        max-width: 540px;
-        width: 100%;
-        margin: 0 auto;
-      }
-
-      .hero-visual img {
-        aspect-ratio: 1 / 1;
-        border-radius: 24px;
-      }
-
-      .float-card {
-        left: 10px;
-        bottom: 12px;
-        padding: 13px 16px;
-      }
-
-      .float-card strong {
-        font-size: 17px;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
-      .section-head {
-        margin-bottom: 30px;
-      }
-
-      .services,
-      .process-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .service-card,
-      .process-card {
-        padding: 24px;
-      }
-
-      .service-card p {
-        min-height: 0;
-      }
-
-      .why-grid {
-        gap: 12px;
-      }
-
-      .why-card {
-        padding: 12px 0;
-      }
-
-      .why-card h3 {
-        font-size: 16px;
-      }
-
-      .why-card p {
-        font-size: 13px;
-      }
-
-      .calculator-intro h2,
-      .section-head h2 {
-        font-size: 32px;
-      }
-
-      .calc-box {
-        padding: 22px;
-        border-radius: 22px;
-      }
-
-      .calc-result {
-        padding: 18px;
-      }
-
-      .cta {
-        padding: 10px 0 60px;
-      }
-
-      .cta-box {
-        padding: 30px 24px;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 22px;
-        border-radius: 24px;
-      }
-
-      .cta-box .btn {
-        width: 100%;
-        white-space: normal;
-      }
-
-      .footer-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-      }
-
-      .trust {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .calc-box {
-        padding: 17px;
-      }
-
-      .extra-option {
-        gap: 8px;
-        padding: 10px;
-      }
-
-      .extra-option span,
-      .extra-option strong {
-        font-size: 12px;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
+  <header class="header">
     <div class="container nav">
       <a class="logo" href="#home">CLEAR<span>SPACE.</span></a>
-
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="#services">Услуги</a>
         <a href="#why">Преимущества</a>
         <a href="#calculator">Стоимость</a>
-        <a href="#process">Как это работает</a>
+        <a href="#application">Заявка</a>
       </nav>
-
-      <a class="btn" href="#calculator">Рассчитать цену ↗</a>
-
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Открыть меню"
-        aria-expanded="false"
-        aria-controls="navLinks"
-        type="button"
-      >☰</button>
+      <a class="button nav-cta" href="#calculator">Рассчитать цену ↗</a>
     </div>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="reveal">
-          <span class="eyebrow">✦ Чистота без лишних хлопот</span>
-          <h1>Возвращаем дому <span>свежесть.</span></h1>
-          <p class="hero-copy">
-            Профессиональная уборка квартир и домов.
-            Вы отдыхаете — мы заботимся о чистоте каждого уголка.
-          </p>
-
+        <div class="hero-content">
+          <span class="eyebrow">ПРОСТРАНСТВО ДЛЯ ЖИЗНИ</span>
+          <h1>Ваш дом.<br>Новая <span>свежесть.</span></h1>
+          <p class="lead">Профессиональная уборка квартир и домов. Мы заботимся о чистоте, чтобы вы могли сосредоточиться на важном.</p>
           <div class="hero-actions">
-            <a href="#calculator" class="btn">Узнать стоимость ↗</a>
-            <a href="#services" class="btn btn-light">Наши услуги</a>
+            <a class="button" href="#calculator">Рассчитать стоимость ↗</a>
+            <a class="button button-outline" href="#services">Наши услуги</a>
           </div>
-
-          <div class="trust">
-            <span>Внимание к деталям</span>
-            <span>Удобная запись</span>
+          <div class="trust-list">
+            <span>✓ Внимание к деталям</span>
+            <span>✓ Удобная запись</span>
           </div>
         </div>
-
-        <div class="hero-visual reveal">
-          <img
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85"
-            alt="Профессиональная уборка светлого интерьера"
-            fetchpriority="high"
-          >
-          <div class="float-card">
-            <strong>100% внимания</strong>
-            <small>к чистоте и деталям</small>
-          </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Светлая современная гостиная">
+          <div class="image-note"><span class="note-dot"></span><div><strong>Чистота в деталях</strong><small>Комфорт начинается дома</small></div></div>
         </div>
       </div>
     </section>
 
-    <section id="services">
+    <section class="section" id="services">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Что мы делаем</span>
-          <h2>Чистота для любого случая</h2>
-          <p>Выберите подходящий формат уборки — остальное поможем организовать.</p>
+        <div class="section-heading">
+          <span class="eyebrow">НАШИ УСЛУГИ</span>
+          <h2>Чистота под ваш ритм жизни</h2>
+          <p>Выберите формат уборки — мы поможем организовать остальное.</p>
         </div>
-
-        <div class="services">
-          <article class="service-card reveal">
-            <div class="service-icon">🧹</div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">✦</div>
             <h3>Поддерживающая</h3>
-            <p>Регулярная уборка, чтобы дома всегда было приятно находиться.</p>
-            <span class="service-price">80 ₽ / м²</span>
+            <p>Регулярный уход за пространством для свежести каждый день.</p>
+            <div class="service-bottom"><strong>80 ₽ / м²</strong><a href="#calculator" data-type="80">Выбрать ↗</a></div>
           </article>
-
-          <article class="service-card reveal">
-            <div class="service-icon">✨</div>
+          <article class="service-card featured">
+            <div class="popular-label">ПОПУЛЯРНЫЙ ВЫБОР</div>
+            <div class="service-icon">✧</div>
             <h3>Генеральная</h3>
-            <p>Тщательная уборка поверхностей и труднодоступных мест.</p>
-            <span class="service-price">150 ₽ / м²</span>
+            <p>Более тщательная уборка поверхностей и труднодоступных мест.</p>
+            <div class="service-bottom"><strong>150 ₽ / м²</strong><a href="#calculator" data-type="150">Выбрать ↗</a></div>
           </article>
-
-          <article class="service-card reveal">
-            <div class="service-icon">🪟</div>
+          <article class="service-card">
+            <div class="service-icon">◇</div>
             <h3>После ремонта</h3>
-            <p>Удаление строительной пыли и приведение помещения в порядок.</p>
-            <span class="service-price">200 ₽ / м²</span>
+            <p>Уборка пыли и подготовка пространства к комфортной жизни.</p>
+            <div class="service-bottom"><strong>200 ₽ / м²</strong><a href="#calculator" data-type="200">Выбрать ↗</a></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="why" id="why">
+    <section class="section why-section" id="why">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Почему CLEAR SPACE</span>
-          <h2>Ваш комфорт — в деталях</h2>
-          <p>Продуманный подход к уборке и удобство на всех этапах.</p>
+        <div class="section-heading">
+          <span class="eyebrow eyebrow-light">ПОЧЕМУ CLEAR SPACE</span>
+          <h2>Больше порядка.<br>Меньше забот.</h2>
+          <p>Продуманный сервис, который освобождает ваше время.</p>
         </div>
-
-        <div class="why-grid">
-          <article class="why-card reveal">
-            <span class="num">01 / ПОДХОД</span>
-            <h3>Внимание к мелочам</h3>
-            <p>Заботимся не только о видимых поверхностях, но и о деталях.</p>
-          </article>
-
-          <article class="why-card reveal">
-            <span class="num">02 / УДОБСТВО</span>
-            <h3>Понятная запись</h3>
-            <p>Выберите услугу и отправьте заявку в несколько простых шагов.</p>
-          </article>
-
-          <article class="why-card reveal">
-            <span class="num">03 / ГИБКОСТЬ</span>
-            <h3>Под ваши задачи</h3>
-            <p>Подберём формат уборки под размер и состояние помещения.</p>
-          </article>
-
-          <article class="why-card reveal">
-            <span class="num">04 / РЕЗУЛЬТАТ</span>
-            <h3>Больше свободного времени</h3>
-            <p>Меньше бытовых забот — больше времени на важное.</p>
-          </article>
+        <div class="benefit-grid">
+          <article><span>01</span><h3>Внимание к деталям</h3><p>Аккуратный подход к каждой зоне и поверхности.</p></article>
+          <article><span>02</span><h3>Понятный расчёт</h3><p>Предварительная стоимость до оформления заявки.</p></article>
+          <article><span>03</span><h3>Под ваши задачи</h3><p>Выберите подходящий вид уборки и дополнительные услуги.</p></article>
+          <article><span>04</span><h3>Ваше время важно</h3><p>Меньше бытовых забот — больше времени для себя.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="calculator">
-      <div class="container calculator-wrap">
-        <div class="calculator-intro reveal">
-          <span class="eyebrow">РАСЧЁТ СТОИМОСТИ</span>
-          <h2>Чистота начинается <span>здесь.</span></h2>
-          <p>
-            Выберите тип уборки, укажите площадь и добавьте
-            дополнительные услуги.
-          </p>
-          <p>
-            Стоимость пересчитывается автоматически, чтобы вы могли
-            заранее оценить бюджет.
-          </p>
-
-          <div class="calc-hint">
-            <span>✦</span>
-            <p>
-              Это предварительный расчёт. Итоговая цена зависит
-              от состояния помещения и объёма работ.
-            </p>
-          </div>
+    <section class="section" id="calculator">
+      <div class="container calculator-layout">
+        <div class="calculator-copy">
+          <span class="eyebrow">ПРОЗРАЧНЫЙ РАСЧЁТ</span>
+          <h2>Узнайте стоимость<br><span>заранее.</span></h2>
+          <p>Укажите площадь, выберите уборку и дополнительные услуги. Сумма обновится автоматически.</p>
+          <div class="calculator-tip"><span>✦</span><p>Расчёт предварительный. Окончательная стоимость зависит от состояния помещения и объёма работ.</p></div>
         </div>
-
-        <div class="calc-box reveal">
+        <div class="calculator-card">
           <div class="field">
             <label for="cleanType">Тип уборки</label>
             <select id="cleanType">
               <option value="80">Поддерживающая — 80 ₽/м²</option>
-              <option value="150">Генеральная — 150 ₽/м²</option>
+              <option value="150" selected>Генеральная — 150 ₽/м²</option>
               <option value="200">После ремонта — 200 ₽/м²</option>
             </select>
           </div>
-
           <div class="field">
             <label for="area">Площадь помещения, м²</label>
-            <input
-              id="area"
-              type="number"
-              min="10"
-              max="500"
-              step="1"
-              value="50"
-              inputmode="numeric"
-            >
-            <small class="field-hint">От 10 до 500 м²</small>
+            <input id="area" type="number" min="10" max="500" value="50" step="1">
+            <small>Допустимая площадь: 10–500 м²</small>
           </div>
-
           <div class="field">
             <label>Дополнительные услуги</label>
-
-            <label class="extra-option">
-              <input type="checkbox" class="extra-service" value="700">
-              <span>Мытьё духовки</span>
-              <strong>+700 ₽</strong>
-            </label>
-
-            <label class="extra-option">
-              <input type="checkbox" class="extra-service" value="500">
-              <span>Мытьё холодильника</span>
-              <strong>+500 ₽</strong>
-            </label>
-
-            <label class="extra-option">
-              <input type="checkbox" class="extra-service" value="1000">
-              <span>Мытьё окон</span>
-              <strong>+1 000 ₽</strong>
-            </label>
+            <label class="check-row"><input class="extra" type="checkbox" value="700" data-name="Мытьё духовки"><span>Мытьё духовки</span><strong>+700 ₽</strong></label>
+            <label class="check-row"><input class="extra" type="checkbox" value="500" data-name="Мытьё холодильника"><span>Мытьё холодильника</span><strong>+500 ₽</strong></label>
+            <label class="check-row"><input class="extra" type="checkbox" value="1000" data-name="Мытьё окон"><span>Мытьё окон</span><strong>+1 000 ₽</strong></label>
           </div>
-
-          <div class="calc-result" aria-live="polite">
-            <div>
-              <small>Предварительная стоимость</small>
-              <strong id="price">4 000 ₽</strong>
-              <p>Точную стоимость подтвердим после уточнения деталей.</p>
-            </div>
-            <span aria-hidden="true">✦</span>
+          <div class="price-panel">
+            <div><small>Предварительная стоимость</small><strong id="price">7 500 ₽</strong></div>
+            <span>✧</span>
           </div>
-
-          <button class="btn" id="requestBtn" type="button">
-            Оставить заявку ↗
-          </button>
-
-          <p class="fine-print">
-            Цены демонстрационные. Перед запуском сайта согласуйте
-            их с фактическим прайсом компании.
-          </p>
+          <p class="fine-print" id="priceHint">Предварительный расчёт, не является окончательным предложением.</p>
+          <a class="button button-full" href="#application" id="toApplication">Оформить заявку ↗</a>
         </div>
       </div>
     </section>
 
-    <section id="process">
+    <section class="section application-section" id="application">
+      <div class="container application-layout">
+        <div class="application-copy">
+          <span class="eyebrow">СЛЕДУЮЩИЙ ШАГ</span>
+          <h2>Давайте сделаем<br>ваше пространство <span>чище.</span></h2>
+          <p>Заполните форму, чтобы подготовить заявку со всеми выбранными параметрами.</p>
+          <div class="application-detail"><span>01</span><div><strong>Несколько простых полей</strong><p>Расскажите, как с вами связаться.</p></div></div>
+          <div class="application-detail"><span>02</span><div><strong>Всё в одном сообщении</strong><p>Тип уборки, площадь и предварительная стоимость.</p></div></div>
+        </div>
+        <form class="application-form" id="applicationForm">
+          <h3>Ваша заявка</h3>
+          <p class="form-intro">Поля со звёздочкой обязательны.</p>
+          <label for="clientName">Ваше имя *</label>
+          <input id="clientName" name="name" required maxlength="80" autocomplete="name" placeholder="Как к вам обращаться?">
+          <label for="clientPhone">Телефон *</label>
+          <input id="clientPhone" name="phone" type="tel" required maxlength="30" autocomplete="tel" placeholder="+7 900 000-00-00">
+          <label for="clientContact">Предпочтительный способ связи</label>
+          <select id="clientContact" name="contact">
+            <option>Телефон</option><option>Telegram</option><option>WhatsApp</option>
+          </select>
+          <label for="clientAddress">Адрес или район</label>
+          <input id="clientAddress" name="address" maxlength="160" placeholder="Район или адрес объекта">
+          <label for="clientComment">Комментарий</label>
+          <textarea id="clientComment" name="comment" rows="3" maxlength="1000" placeholder="Удобная дата или пожелания"></textarea>
+          <div class="form-price"><span>Предварительная стоимость</span><strong id="formPrice">7 500 ₽</strong></div>
+          <button class="button button-full" type="submit">Подготовить заявку ↗</button>
+          <p class="form-note">Пока отправка на сервер не подключена. Вы сможете скопировать подготовленный текст заявки.</p>
+          <div class="form-result" id="formResult" hidden>
+            <strong>Заявка подготовлена</strong>
+            <textarea id="applicationText" rows="9" readonly aria-label="Текст заявки"></textarea>
+            <button class="button button-full" type="button" id="copyApplication">Скопировать заявку</button>
+            <p id="copyStatus" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section process-section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-heading">
           <span class="eyebrow">ВСЁ ПРОСТО</span>
           <h2>Три шага к чистоте</h2>
-          <p>Вы выбираете услугу, мы согласовываем детали и приступаем к работе.</p>
+          <p>Понятный путь от выбора услуги до свежего пространства.</p>
         </div>
-
         <div class="process-grid">
-          <article class="process-card reveal">
-            <span class="process-number">01</span>
-            <div class="process-icon">📝</div>
-            <h3>Выбираете услугу</h3>
-            <p>Укажите тип уборки и площадь. Калькулятор поможет оценить бюджет.</p>
-          </article>
-
-          <article class="process-card reveal">
-            <span class="process-number">02</span>
-            <div class="process-icon">📅</div>
-            <h3>Обсуждаем детали</h3>
-            <p>Уточняем объём работ, удобное время и окончательную стоимость.</p>
-          </article>
-
-          <article class="process-card reveal">
-            <span class="process-number">03</span>
-            <div class="process-icon">✨</div>
-            <h3>Наслаждаетесь чистотой</h3>
-            <p>Вы возвращаетесь к своим делам, а пространство становится чище.</p>
-          </article>
+          <article class="process-card"><span>01</span><div class="process-icon">↗</div><h3>Выберите услугу</h3><p>Укажите вид уборки и площадь помещения.</p></article>
+          <article class="process-card"><span>02</span><div class="process-icon">＋</div><h3>Подготовьте заявку</h3><p>Добавьте контактные данные и пожелания.</p></article>
+          <article class="process-card"><span>03</span><div class="process-icon">✧</div><h3>Согласуйте детали</h3><p>Обсудите удобное время и окончательную цену.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="cta">
-      <div class="container">
-        <div class="cta-box reveal">
-          <div>
-            <h2>Освободите время для жизни.</h2>
-            <p>Начните с расчёта стоимости уборки.</p>
-          </div>
-          <a class="btn" href="#calculator">Рассчитать уборку ↗</a>
-        </div>
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <div><span class="eyebrow eyebrow-light">CLEAR SPACE</span><h2>Освободите время<br>для жизни.</h2><p>Начните с простого расчёта уборки.</p></div>
+        <a class="button button-white" href="#calculator">Рассчитать стоимость ↗</a>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container footer-inner">
       <a class="logo" href="#home">CLEAR<span>SPACE.</span></a>
-      <p>© <span id="year"></span> CLEAR SPACE. Концепт сайта клининговой компании.</p>
-      <div class="footer-links">
-        <a href="#services">Услуги</a>
-        <a href="#calculator">Стоимость</a>
-        <a href="#home">Наверх ↑</a>
-      </div>
+      <p>© <span id="year"></span> CLEAR SPACE</p>
+      <a href="#home">Вернуться наверх ↑</a>
     </div>
   </footer>
 
@@ -1185,116 +204,95 @@
     const cleanType = document.getElementById('cleanType');
     const area = document.getElementById('area');
     const price = document.getElementById('price');
-    const requestBtn = document.getElementById('requestBtn');
-    const extras = [...document.querySelectorAll('.extra-service')];
+    const formPrice = document.getElementById('formPrice');
+    const extras = [...document.querySelectorAll('.extra')];
 
     function calculatePrice() {
       const size = Number(area.value);
-
-      if (area.value.trim() === '' || !Number.isFinite(size)) {
-        price.textContent = 'Введите площадь';
+      if (area.value.trim() === '' || !Number.isFinite(size) || size < 10 || size > 500) {
+        price.textContent = 'Проверьте площадь';
+        formPrice.textContent = 'Уточняется';
         return null;
       }
-
-      if (size < 10 || size > 500) {
-        price.textContent = 'От 10 до 500 м²';
-        return null;
-      }
-
-      const rate = Number(cleanType.value);
-
-      const extrasTotal = extras
-        .filter(item => item.checked)
-        .reduce((sum, item) => sum + Number(item.value), 0);
-
-      const total = Math.round(size * rate + extrasTotal);
-
-      price.textContent = total.toLocaleString('ru-RU') + ' ₽';
-
+      const extraTotal = extras.filter(x => x.checked).reduce((sum, x) => sum + Number(x.value), 0);
+      const total = Math.round(size * Number(cleanType.value) + extraTotal);
+      const formatted = total.toLocaleString('ru-RU') + ' ₽';
+      price.textContent = formatted;
+      formPrice.textContent = formatted;
       return total;
     }
 
-    cleanType.addEventListener('change', calculatePrice);
-    area.addEventListener('input', calculatePrice);
-    extras.forEach(item => {
-      item.addEventListener('change', calculatePrice);
+    [cleanType, area, ...extras].forEach(el => {
+      el.addEventListener('input', calculatePrice);
+      el.addEventListener('change', calculatePrice);
     });
-
     calculatePrice();
 
-    requestBtn.addEventListener('click', () => {
-      const total = calculatePrice();
+    document.querySelectorAll('[data-type]').forEach(link => {
+      link.addEventListener('click', () => {
+        cleanType.value = link.dataset.type;
+        calculatePrice();
+      });
+    });
 
-      if (total === null) {
+    document.getElementById('applicationForm').addEventListener('submit', event => {
+      event.preventDefault();
+      if (calculatePrice() === null) {
         area.focus();
+        document.getElementById('calculator').scrollIntoView({behavior:'smooth'});
         return;
       }
 
-      const typeName = cleanType.options[cleanType.selectedIndex].text;
+      const chosenExtras = extras.filter(x => x.checked).map(x => x.dataset.name);
+      const data = [
+        'ЗАЯВКА — CLEAR SPACE',
+        '',
+        'Имя: ' + document.getElementById('clientName').value.trim(),
+        'Телефон: ' + document.getElementById('clientPhone').value.trim(),
+        'Способ связи: ' + document.getElementById('clientContact').value,
+        'Адрес/район: ' + (document.getElementById('clientAddress').value.trim() || 'Не указан'),
+        'Тип уборки: ' + cleanType.options[cleanType.selectedIndex].text,
+        'Площадь: ' + area.value + ' м²',
+        'Дополнительные услуги: ' + (chosenExtras.join(', ') || 'Не выбраны'),
+        'Предварительная стоимость: ' + price.textContent,
+        'Комментарий: ' + (document.getElementById('clientComment').value.trim() || 'Нет')
+      ].join('\n');
 
-      const selectedExtras = extras
-        .filter(item => item.checked)
-        .map(item => item.parentElement.querySelector('span').textContent);
-
-      const message =
-        'Здравствуйте! Хочу узнать подробнее об уборке.\n' +
-        'Тип: ' + typeName + '.\n' +
-        'Площадь: ' + area.value + ' м².\n' +
-        'Дополнительные услуги: ' +
-        (selectedExtras.length ? selectedExtras.join(', ') : 'не выбраны') + '.\n' +
-        'Предварительная стоимость: ' + price.textContent + '.';
-
-      const url = 'https://t.me/share/url?url=' +
-        encodeURIComponent(location.href) +
-        '&text=' + encodeURIComponent(message);
-
-      window.open(url, '_blank', 'noopener,noreferrer');
+      document.getElementById('applicationText').value = data;
+      document.getElementById('formResult').hidden = false;
+      document.getElementById('copyStatus').textContent = '';
+      document.getElementById('formResult').scrollIntoView({behavior:'smooth', block:'nearest'});
     });
 
-    document.getElementById('year').textContent =
-      new Date().getFullYear();
+    document.getElementById('copyApplication').addEventListener('click', async () => {
+      const text = document.getElementById('applicationText');
+      const status = document.getElementById('copyStatus');
+      try {
+        await navigator.clipboard.writeText(text.value);
+        status.textContent = 'Скопировано. Теперь можно вставить текст в сообщение.';
+      } catch {
+        text.focus();
+        text.select();
+        status.textContent = 'Выделите текст и скопируйте его вручную.';
+      }
+    });
 
-    const menuBtn = document.getElementById('menuBtn');
+    const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
-
-    menuBtn.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
-      menuBtn.setAttribute(
-        'aria-label',
-        isOpen ? 'Закрыть меню' : 'Открыть меню'
-      );
-      menuBtn.textContent = isOpen ? '✕' : '☰';
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+      menuToggle.textContent = open ? '✕' : '☰';
     });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Открыть меню');
+      menuToggle.textContent = '☰';
+    }));
 
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Открыть меню');
-        menuBtn.textContent = '☰';
-      });
-    });
-
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      document.querySelectorAll('.reveal').forEach(el => {
-        observer.observe(el);
-      });
-    } else {
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.classList.add('visible');
-      });
-    }
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
