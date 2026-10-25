@@ -2590,12 +2590,42 @@ textarea:focus-visible {
 
 /* === FIX: vertically center checkboxes === */
 
+
+/* === CLEAR SPACE: stable checkbox alignment === */
+
 .calculator-card .check-row {
-  display: grid;
-  grid-template-columns: 18px minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  column-gap: 12px;
+  justify-content: flex-start;
+  gap: 12px;
+  min-height: 50px;
 }
+
+.calculator-card .check-row input[type="checkbox"] {
+  position: relative;
+  inset: auto;
+  display: block;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  align-self: center;
+}
+
+.calculator-card .check-row span {
+  display: block;
+  flex: 1 1 auto;
+  align-self: center;
+}
+
+.calculator-card .check-row strong {
+  display: block;
+  flex: 0 0 auto;
+  align-self: center;
+  margin-left: auto;
+}
+
 
 .calculator-card .check-row input[type="checkbox"] {
   grid-column: 1;
