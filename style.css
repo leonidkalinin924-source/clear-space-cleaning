@@ -2710,3 +2710,24 @@ textarea:focus-visible {
   border-color: #3978e8;
   box-shadow: 0 0 0 3px rgba(57, 120, 232, 0.12);
 }
+
+/* CLEAR SPACE — панель итоговой цены */
+.calculator-card .price-panel {
+  padding: 20px;
+  border: 1px solid #dce7fb;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f4f8ff, #edf3ff);
+}
+
+.calculator-card .price-panel > div > small {
+  display: block;
+  margin-bottom: 8px;
+  color: #5b6880;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.calculator-card .price-panel > span {
+  color: #3978e8;
+  font-size: 28px;
+}
