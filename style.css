@@ -2689,3 +2689,24 @@ textarea:focus-visible {
   border-color: #3978e8;
   box-shadow: 0 0 0 3px rgba(57, 120, 232, 0.12);
 }
+
+/* CLEAR SPACE — тип уборки */
+.calculator-card #cleanType {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #d8e1ef;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculator-card #cleanType:focus {
+  outline: none;
+  border-color: #3978e8;
+  box-shadow: 0 0 0 3px rgba(57, 120, 232, 0.12);
+}
