@@ -1360,3 +1360,137 @@ button:focus-visible, a:focus-visible {
     font-size: 14px;
   }
 }
+
+/* === CLEAR SPACE: hero + contrast upgrade === */
+
+/* Первый экран */
+.hero {
+  padding-top: 100px;
+  padding-bottom: 108px;
+  background:
+    radial-gradient(
+      ellipse at 88% 18%,
+      rgba(57, 120, 232, 0.10),
+      transparent 38%
+    ),
+    #f7f8fa;
+}
+
+.hero-grid {
+  gap: clamp(36px, 5vw, 72px);
+}
+
+.hero h1 {
+  max-width: 620px;
+  font-size: clamp(44px, 5.8vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+
+.hero .lead {
+  max-width: 470px;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.hero-actions {
+  gap: 14px;
+}
+
+.hero-actions .button {
+  min-height: 54px;
+  padding: 15px 23px;
+  border-radius: 14px;
+}
+
+.hero-image > img {
+  border-radius: 30px;
+  box-shadow: 0 24px 65px rgba(20, 38, 61, 0.15);
+}
+
+.image-note {
+  border-radius: 18px;
+  box-shadow: 0 14px 38px rgba(20, 38, 61, 0.12);
+}
+
+/* Контраст для секции «Почему CLEAR SPACE» */
+.why-section {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(76, 125, 220, 0.18),
+      transparent 65%
+    ),
+    #14263d;
+}
+
+.benefit-grid article {
+  padding: 24px 20px;
+  border: 1px solid rgba(177, 202, 255, 0.20);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.065);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.benefit-grid article > span {
+  color: #a9c5ff;
+}
+
+.benefit-grid h3 {
+  color: #ffffff;
+}
+
+.benefit-grid p {
+  color: #d0daea;
+}
+
+@media (hover: hover) and (min-width: 761px) {
+  .benefit-grid article:hover {
+    background: rgba(112, 157, 255, 0.14);
+    border-color: rgba(177, 202, 255, 0.42);
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 54px;
+    padding-bottom: 66px;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 10.5vw, 58px);
+    line-height: 1.07;
+  }
+
+  .hero .lead {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .hero-image > img {
+    border-radius: 24px;
+  }
+
+  .image-note {
+    max-width: calc(100% - 8px);
+  }
+
+  .benefit-grid article {
+    padding: 19px 16px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+}
