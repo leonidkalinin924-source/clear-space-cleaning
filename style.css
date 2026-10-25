@@ -2294,18 +2294,6 @@ textarea:focus-visible {
   }
 }
 
-/* === CLEAR SPACE: minimalist extra services === */
-
-.calculator-card .check-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid #edf0f5;
-  color: #344258;
-  cursor: pointer;
-  transition: color 180ms ease;
-}
 
 .calculator-card .check-row:last-child {
   border-bottom: none;
@@ -2556,13 +2544,6 @@ textarea:focus-visible {
   }
 }
 
-/* === CLEAR SPACE: fix checkbox alignment === */
-
-.calculator-card .check-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
 
 .calculator-card .check-row input[type="checkbox"] {
   appearance: auto;
