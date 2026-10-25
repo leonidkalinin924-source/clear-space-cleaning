@@ -2293,3 +2293,265 @@ textarea:focus-visible {
     margin-bottom: 22px;
   }
 }
+
+/* === CLEAR SPACE: minimalist extra services === */
+
+.calculator-card .check-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0f5;
+  color: #344258;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.calculator-card .check-row:last-child {
+  border-bottom: none;
+}
+
+.calculator-card .check-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 0;
+  accent-color: #3978e8;
+  cursor: pointer;
+}
+
+.calculator-card .check-row span {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.calculator-card .check-row strong {
+  flex-shrink: 0;
+  color: #24344b;
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .calculator-card .check-row:hover {
+    color: #245fc4;
+  }
+}
+
+.calculator-card .check-row:has(input:checked) {
+  color: #245fc4;
+}
+
+.calculator-card .check-row:has(input:checked) strong {
+  color: #245fc4;
+}
+
+/* === CLEAR SPACE: refined price summary === */
+
+.calculator-card .price-panel {
+  gap: 18px;
+  padding: 24px 0;
+  margin-top: 8px;
+  border: 0;
+  border-top: 1px solid #e8edf4;
+  border-bottom: 1px solid #e8edf4;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.calculator-card .price-panel small {
+  margin-bottom: 8px;
+  color: #778397;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+
+.calculator-card .price-panel strong {
+  color: #172b49;
+  font-size: clamp(30px, 4vw, 38px);
+  font-weight: 750;
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+}
+
+.calculator-card .price-panel > span {
+  width: 42px;
+  height: 42px;
+  flex-basis: 42px;
+  border: 1px solid #e7edf6;
+  border-radius: 13px;
+  background: #f7f9fc;
+  color: #3978e8;
+  font-size: 22px;
+  box-shadow: none;
+}
+
+.calculator-card .fine-print {
+  margin-top: 14px;
+  color: #8490a1;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .calculator-card .price-panel {
+    padding: 20px 0;
+  }
+
+  .calculator-card .price-panel strong {
+    font-size: 30px;
+  }
+}
+
+/* === CLEAR SPACE: premium calculator button === */
+
+.calculator-card #toApplication {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border: 1px solid #2866cf;
+  border-radius: 13px;
+  background: #3978e8;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(57, 120, 232, 0.16);
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .calculator-card #toApplication:hover {
+    background: #2866cf;
+    box-shadow: 0 8px 20px rgba(57, 120, 232, 0.23);
+    transform: translateY(-1px);
+  }
+}
+
+.calculator-card #toApplication:focus-visible {
+  outline: 3px solid rgba(57, 120, 232, 0.3);
+  outline-offset: 3px;
+}
+
+.calculator-card #toApplication:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(57, 120, 232, 0.16);
+}
+
+/* === CLEAR SPACE: calculator typography === */
+
+.calculator-copy h2 {
+  color: #172b49;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 750;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.calculator-copy p {
+  color: #68778d;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+}
+
+.calculator-card .field > label {
+  color: #293950;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+@media (max-width: 480px) {
+  .calculator-copy h2 {
+    font-size: 31px;
+    line-height: 1.16;
+  }
+
+  .calculator-copy p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+/* === CLEAR SPACE: refined form controls === */
+
+.calculator-card select,
+.calculator-card input[type="number"] {
+  min-height: 52px;
+  border: 1px solid #e3e9f1;
+  border-radius: 12px;
+  background-color: #fbfcfe;
+  color: #20314a;
+  font-size: 14px;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.calculator-card select:focus,
+.calculator-card input[type="number"]:focus {
+  border-color: #3978e8;
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(57, 120, 232, 0.09);
+}
+
+.calculator-card .field small {
+  color: #8591a2;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* === CLEAR SPACE: mobile calculator refinement === */
+
+@media (max-width: 480px) {
+  .calculator-card {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .calculator-card .field {
+    margin-bottom: 22px;
+  }
+
+  .calculator-card .check-row {
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .calculator-card .check-row span,
+  .calculator-card .check-row strong {
+    font-size: 12px;
+  }
+
+  .calculator-card .price-panel {
+    gap: 12px;
+  }
+
+  .calculator-card .price-panel > span {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    border-radius: 11px;
+  }
+
+  .calculator-card #toApplication {
+    min-height: 52px;
+    margin-top: 16px;
+  }
+}
