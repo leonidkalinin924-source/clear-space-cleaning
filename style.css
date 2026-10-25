@@ -2219,3 +2219,77 @@ textarea:focus-visible {
     height: 42px;
   }
 }
+
+/* === CLEAR SPACE: minimalist calculator card === */
+
+.calculator-card {
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(25, 49, 82, 0.08);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow:
+    0 2px 4px rgba(20, 40, 70, 0.02),
+    0 20px 55px rgba(20, 40, 70, 0.07);
+}
+
+.calculator-card .field {
+  margin-bottom: 25px;
+}
+
+.calculator-card .field > label {
+  display: block;
+  margin-bottom: 10px;
+  color: #24344b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.calculator-card select,
+.calculator-card input[type="number"] {
+  width: 100%;
+  min-height: 50px;
+  padding: 13px 15px;
+  border: 1px solid #e1e7ef;
+  border-radius: 12px;
+  background: #fbfcfe;
+  color: #18263b;
+  font: inherit;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.calculator-card select:hover,
+.calculator-card input[type="number"]:hover {
+  border-color: #c5d3e8;
+  background: #ffffff;
+}
+
+.calculator-card select:focus,
+.calculator-card input[type="number"]:focus {
+  border-color: #6b99e8;
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(57, 120, 232, 0.09);
+}
+
+.calculator-card .field small {
+  display: block;
+  margin-top: 8px;
+  color: #7b8798;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .calculator-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .calculator-card .field {
+    margin-bottom: 22px;
+  }
+}
