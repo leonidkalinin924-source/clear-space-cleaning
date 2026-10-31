@@ -2890,3 +2890,65 @@ textarea:focus-visible {
     padding: 24px !important;
   }
 }
+
+/* CLEAR SPACE — визуальный блок преимуществ */
+
+#calculator .calculator-tip {
+  margin-top: 35px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e2eaf7;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(40, 80, 150, 0.06);
+}
+
+#calculator .calculator-tip > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  background: #eaf1ff;
+  color: #3978e8;
+  border-radius: 14px;
+  font-size: 22px;
+}
+
+#calculator .calculator-tip p {
+  margin: 0;
+  color: #5d6e87;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Декоративный акцент */
+#calculator .calculator-copy {
+  position: relative;
+}
+
+#calculator .calculator-copy::after {
+  content: "✦  КАЧЕСТВО  ·  ЗАБОТА  ·  ЧИСТОТА";
+  display: block;
+  margin-top: 30px;
+  color: #3978e8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 600px) {
+  #calculator .calculator-tip {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  #calculator .calculator-tip > span {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+  }
+}
