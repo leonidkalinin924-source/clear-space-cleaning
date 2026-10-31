@@ -2816,3 +2816,77 @@ textarea:focus-visible {
     font-size: 16px !important;
   }
 }
+
+/* CLEAR SPACE — новый дизайн секции калькулятора */
+
+#calculator {
+  background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#calculator .calculator-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* Левая часть */
+#calculator .calculator-copy {
+  max-width: 520px;
+}
+
+#calculator .calculator-copy h2 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  font-weight: 800;
+  color: #142746;
+  margin: 24px 0;
+}
+
+#calculator .calculator-copy h2 span {
+  color: #3978e8;
+}
+
+#calculator .calculator-copy > p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #65748d;
+  max-width: 440px;
+}
+
+/* Карточка калькулятора */
+#calculator .calculator-card {
+  background: #ffffff;
+  border: 1px solid #e5ecf7;
+  border-radius: 28px;
+  padding: 36px !important;
+  box-shadow: 0 24px 70px rgba(40, 80, 150, 0.10);
+}
+
+/* Адаптация под планшет и телефон */
+@media (max-width: 900px) {
+  #calculator {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  #calculator .calculator-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  #calculator .calculator-copy {
+    max-width: 100%;
+  }
+
+  #calculator .calculator-copy h2 {
+    font-size: clamp(36px, 8vw, 52px);
+  }
+
+  #calculator .calculator-card {
+    padding: 24px !important;
+  }
+}
