@@ -2795,3 +2795,24 @@ textarea:focus-visible {
   background: #f8faff;
   border-color: #cbd9f2;
 }
+
+/* CLEAR SPACE — мобильный калькулятор */
+@media (max-width: 600px) {
+  .calculator-card {
+    padding: 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .calculator-card .price-panel {
+    padding: 16px !important;
+  }
+
+  .calculator-card #price {
+    font-size: 26px !important;
+  }
+
+  .calculator-card #area,
+  .calculator-card #cleanType {
+    font-size: 16px !important;
+  }
+}
