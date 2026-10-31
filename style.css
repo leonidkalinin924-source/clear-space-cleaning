@@ -2731,3 +2731,10 @@ textarea:focus-visible {
   color: #3978e8;
   font-size: 28px;
 }
+
+/* CLEAR SPACE — карточка калькулятора */
+.calculator-card {
+  padding: 30px !important;
+  border-radius: 24px !important;
+  box-shadow: 0 12px 40px rgba(25, 50, 90, 0.07);
+}
