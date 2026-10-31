@@ -2770,3 +2770,11 @@ textarea:focus-visible {
 .calculator-card #toApplication:active {
   transform: translateY(0);
 }
+
+/* CLEAR SPACE — пояснение под стоимостью */
+.calculator-card .fine-print {
+  margin-top: 12px;
+  color: #8490a3;
+  font-size: 11px;
+  line-height: 1.6;
+}
